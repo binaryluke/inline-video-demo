@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yoyo Chinese Inline Video Demo</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body>
+    <h1>Yoyo Chinese Inline Video Demo - HTML Video Tag</h1>
+    <p>We use <a href="https://capacitorjs.com">CapacitorJS</a> for our mobile app.</p>
+    <button id="video-tag-button">Add HTML Video Tag</button>
+    <button id="spotlightr-iframe-button">Add Spotlightr iFrame</button>
+    <button id="clear-button">Clear</button>
+    <div id="video-container"></div>
+    <script>
+      const videoTagButton = document.getElementById("video-tag-button")
+      const spotlightrIframeButton = document.getElementById("spotlightr-iframe-button")
+      const clearButton = document.getElementById("clear-button")
+      const videoContainer = document.getElementById("video-container") 
+
+      videoTagButton.addEventListener("click", function () {
+        videoContainer.innerHTML = `<video playsinline="playsinline" controls style="width: 100%" src="https://1693712952.rsc.cdn77.org/99132232/wistia4af889dc921a2acf612aa2fad0ed41c45a36118b.mp4" ></video>`
+      })
+
+      spotlightrIframeButton.addEventListener("click", function () {
+        videoContainer.innerHTML = `<div style="position:relative; width:1px; min-width:100%;padding-bottom:56.25%;"><iframe allow="autoplay" class='spotlightr' allowtransparency="true" style="width:1px; min-width:100%; height: 100%; position:absolute" allowfullscreen="true" src="https://videos.cdn.spotlightr.com/watch/MTQxMTAyNQ==?fallback=true" frameborder="0" scrolling="no" name="videoPlayer"> </iframe></div>`
+      })
+
+      clearButton.addEventListener("click", function () {
+        videoContainer.innerHTML = ""
+      })
+    </script>
+    
+  </body>
+</html>

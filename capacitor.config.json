@@ -1,0 +1,11 @@
+{
+  "appId": "com.yoyochinese.inline_video_demo",
+  "appName": "inline-video-demo",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}
